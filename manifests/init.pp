@@ -8,10 +8,10 @@ class gh {
   include homebrew
 
   homebrew::formula {
-    'boxen/brews/gh': ;
+    'gh': ;
   }
 
-  package { 'boxen/brews/gh':
+  package { 'gh':
     ensure => latest;
   }
 }
