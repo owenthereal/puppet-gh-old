@@ -1,4 +1,3 @@
-include homebrew
 
 # Public: Installs & configures gh
 #
@@ -6,6 +5,8 @@ include homebrew
 #
 # include gh
 class gh {
+  include homebrew
+
   homebrew::formula {
     'boxen/brews/gh': ;
   }
