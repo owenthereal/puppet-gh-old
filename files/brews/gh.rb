@@ -6,7 +6,7 @@ class Gh < Formula
   homepage 'https://github.com/jingweno/gh'
   url "https://github.com/jingweno/gh/archive/#{VERSION}.tar.gz"
   sha1 '1e4ca70ebf018ae192a641f18b735beca5df5c31'
-  version VERSION
+  version "#{VERSION}-boxen1"
 
   head 'https://github.com/jingweno/gh.git'
 
