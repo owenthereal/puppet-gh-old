@@ -7,11 +7,11 @@
 class gh {
   include homebrew
 
-  homebrew::formula {
-    'gh': ;
+  homebrew::formula { 'gh':
+    before => Package['gh']
   }
 
   package { 'gh':
-    ensure => latest;
+    ensure => '0.6.1-boxen1'
   }
 }

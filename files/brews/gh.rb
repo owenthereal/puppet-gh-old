@@ -14,15 +14,10 @@ class Gh < Formula
   depends_on 'go'
 
   def install
-    go_path = ENV['GOPATH']
-    begin
-      ENV['GOPATH'] = Dir.getwd
-      system "go get -d ./..."
-      system "go build -o gh"
-      bin.install 'gh'
-    ensure
-      ENV['GOPATH'] = go_path
-    end
+    go_path = Dir.getwd
+    system "GOPATH='#{go_path}' go get -d ./..."
+    system "GOPATH='#{go_path}' go build -o gh"
+    bin.install 'gh'
   end
 
   def caveats; <<-EOS.undent
