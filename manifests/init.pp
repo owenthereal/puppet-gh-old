@@ -1,4 +1,9 @@
-# This is a placeholder class.
-class template {
-  anchor { 'Hello_World': }
+class gh {
+  homebrew::formula {
+    'boxen/brews/gh': ;
+  }
+
+  package { 'boxen/brews/gh':
+    ensure => latest;
+  }
 }
