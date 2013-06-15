@@ -8,10 +8,10 @@ class gh {
   include homebrew
 
   homebrew::formula { 'gh':
-    before => Package['gh']
+    before => Package['boxen/brews/gh']
   }
 
-  package { 'gh':
+  package { 'boxen/brews/gh':
     ensure => '0.6.1-boxen1'
   }
 }
