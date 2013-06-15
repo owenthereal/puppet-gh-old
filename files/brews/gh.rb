@@ -15,7 +15,8 @@ class Gh < Formula
 
   def install
     go_path = Dir.getwd
-    system "GOPATH='#{go_path}' go get -d ./... && go build -o gh"
+    system "GOPATH='#{go_path}' go get -d ./..."
+    system "GOPATH='#{go_path}' go build -o gh"
     bin.install 'gh'
   end
 
