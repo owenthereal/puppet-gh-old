@@ -10,7 +10,7 @@ class Gh < Formula
 
   head 'https://github.com/jingweno/gh.git'
 
-  depends_on 'hg'
+  depends_on 'mercurial'
   depends_on 'go'
 
   def install
