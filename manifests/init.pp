@@ -8,8 +8,7 @@ class gh {
   include homebrew
 
   homebrew::formula { 'gh':
-    before => Package['boxen/brews/gh'],
-    source => 'https://github.com/jingweno/gh/blob/master/homebrew/gh.rb'
+    before => Package['boxen/brews/gh']
   }
 
   package { 'boxen/brews/gh':
