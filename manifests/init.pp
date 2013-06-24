@@ -12,6 +12,6 @@ class gh {
   }
 
   package { 'boxen/brews/gh':
-    ensure => '0.7.0-boxen1'
+    ensure => '0.8.0-boxen1'
   }
 }
