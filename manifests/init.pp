@@ -1,4 +1,3 @@
-
 # Public: Installs & configures gh
 #
 # Examples
@@ -12,6 +11,6 @@ class gh {
   }
 
   package { 'boxen/brews/gh':
-    ensure => '0.8.0-boxen1'
+    ensure => '0.9.0-boxen1'
   }
 }

@@ -1,7 +1,7 @@
 require "formula"
 
 class Gh < Formula
-  VERSION = "0.8.0"
+  VERSION = "0.9.0"
   ARCH = if MacOS.prefer_64_bit?
            "amd64"
          else
@@ -16,6 +16,8 @@ class Gh < Formula
 
   def install
     bin.install "gh"
+    bash_completion.install "gh.bash_completion.sh"
+    zsh_completion.install "gh.zsh_completion" => "_gh"
   end
 
   def caveats; <<-EOS.undent
