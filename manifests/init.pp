@@ -13,4 +13,9 @@ class gh {
   package { 'boxen/brews/gh':
     ensure => '0.9.0-boxen1'
   }
+
+  file { "${boxen::config::envdir}/gh.sh":
+    source  => 'puppet:///modules/gh/gh.sh',
+    require => File[$boxen::config::envdir]
+  }
 }
