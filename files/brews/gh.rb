@@ -11,7 +11,7 @@ class Gh < Formula
   homepage "https://github.com/jingweno/gh"
   head "https://github.com/jingweno/gh.git"
   url "https://github.com/jingweno/gh/releases/download/v#{VERSION}/gh_#{VERSION}-snapshot_darwin_#{ARCH}.tar.gz"
-  version VERSION
+  version "#{VERSION}-boxen1"
 
   def install
     bin.install "gh"
