@@ -11,7 +11,7 @@ class gh {
   }
 
   package { 'boxen/brews/gh':
-    ensure => '0.15.0-boxen1'
+    ensure => '0.20.1-boxen1'
   }
 
   file { "${boxen::config::envdir}/gh.sh":

@@ -1,7 +1,7 @@
 require "formula"
 
 class Gh < Formula
-  VERSION = "0.15.0"
+  VERSION = "0.20.1"
   ARCH = if MacOS.prefer_64_bit?
            "amd64"
          else
@@ -10,9 +10,8 @@ class Gh < Formula
 
   homepage "https://github.com/jingweno/gh"
   head "https://github.com/jingweno/gh.git"
-  url "https://dl.dropboxusercontent.com/u/1079131/gh/#{VERSION}-snapshot/darwin_#{ARCH}/gh_#{VERSION}-snapshot_darwin_#{ARCH}.tar.gz"
-  version "#{VERSION}-boxen1"
-
+  url "https://github.com/jingweno/gh/releases/download/v#{VERSION}/gh_#{VERSION}-snapshot_darwin_#{ARCH}.tar.gz"
+  version VERSION
 
   def install
     bin.install "gh"
@@ -21,9 +20,9 @@ class Gh < Formula
   end
 
   def caveats; <<-EOS.undent
-  To upgrade gh, run `brew upgrade https://raw.github.com/jingweno/gh/master/homebrew/gh.rb`
+                      To upgrade gh, run `brew upgrade https://raw.github.com/jingweno/gh/master/homebrew/gh.rb`
 
-  More information here: https://github.com/jingweno/gh/blob/master/README.md
+                        More information here: https://github.com/jingweno/gh/blob/master/README.md
     EOS
   end
 
